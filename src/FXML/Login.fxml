@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="loginPanel" alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="409.0" prefWidth="303.0">
+         <children>
+            <Text fx:id="emaillabel" layoutX="41.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+            <Text fx:id="passwordlabel" layoutX="41.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+            <TextField fx:id="emailfield" layoutX="102.0" layoutY="62.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></TextField>
+            <PasswordField fx:id="passwordfield" layoutX="102.0" layoutY="88.0" />
+            <Button fx:id="submitbutton" layoutX="197.0" layoutY="128.0" mnemonicParsing="false" onAction="#login" text="Login" />
+            <Button fx:id="createaccountbutton" layoutX="102.0" layoutY="128.0" mnemonicParsing="false" onAction="#enterCreateAccount" text="Create Acount" />
+            <Text layoutX="129.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="RED" layoutX="258.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="258.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fx:id="errorMsg" fill="RED" layoutX="16.0" layoutY="201.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One or more mandatory fields have not been filled." />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="addRemoveProductPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddProductController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text layoutX="274.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Product">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="productNameField" layoutX="225.0" layoutY="89.0" />
+            <TextField fx:id="productPriceField" layoutX="225.0" layoutY="131.0" />
+            <TextField fx:id="currentStockField" layoutX="225.0" layoutY="175.0" />
+            <Text layoutX="137.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name" />
+            <Text layoutX="137.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Price" />
+            <Text layoutX="137.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Stock" />
+            <Text layoutX="137.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+            <TextArea fx:id="descriptionField" layoutX="225.0" layoutY="225.0" prefHeight="64.0" prefWidth="273.0" />
+            <Button layoutX="331.0" layoutY="301.0" mnemonicParsing="false" onAction="#addProduct" text="Submit" />
+            <Button layoutX="250.0" layoutY="301.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+            <Text fx:id="errorMsg" fill="RED" layoutX="275.0" layoutY="357.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errorMsg" />
+            <Text fill="RED" layoutX="382.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="382.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="383.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="509.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

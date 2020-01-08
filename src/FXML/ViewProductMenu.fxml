@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="viewProductPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ViewProductMenuController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <ListView fx:id="yourProductList" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <Button layoutX="130.0" layoutY="271.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+            <Text layoutX="95.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Products">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="stockField" layoutX="77.0" layoutY="188.0" />
+            <Text layoutX="86.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Stock to Product" />
+            <Button layoutX="115.0" layoutY="225.0" mnemonicParsing="false" onAction="#updateStock" text="Add Stock" />
+            <TextField fx:id="productIDField" layoutX="76.0" layoutY="151.0" />
+            <Text layoutX="14.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product ID" />
+            <Text layoutX="28.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock" />
+            <Text fx:id="errorMsg" layoutX="126.0" layoutY="337.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="errorMsg" />
+            <Text fill="RED" layoutX="232.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+            <Text fill="RED" layoutX="233.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
